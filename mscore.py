@@ -1,18 +1,18 @@
 """
-mscore.py - Beneish M-Score earnings-manipulation screener (single file).
+Beneish M-Score screener — pulls live from SEC EDGAR XBRL.
 
-Pulls a company's financials straight from the SEC EDGAR XBRL API, computes
-the 8-factor Beneish M-Score, and shows every component so you can see WHY a
-company flags. Scores above -1.78 indicate a likely manipulator.
+Computes the 8-factor Beneish M-Score for any US public company and shows
+every component so you can see WHY it flags. Scores above -1.78 indicate a
+likely earnings manipulator.
 
 SETUP (one time):
     pip3 install requests
-    Then set EDGAR_UA below to your name + email (SEC requires a contact header).
+    Set EDGAR_UA below to your name + email (SEC requires a contact header).
 
 USE:
     python3 mscore.py --validate        # run the fraud + control test set
     python3 mscore.py UAA 2016          # one company-year, full 8-component breakdown
-    python3 mscore.py --tags MDXG       # debug: list a company's revenue/debt/income tags
+    python3 mscore.py --tags MDXG       # debug: list available revenue/debt/income tags
 """
 import sys
 from datetime import date
