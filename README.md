@@ -89,7 +89,7 @@ Use this to diagnose missing-field errors by finding what tags a company actuall
 
 ## Validation results
 
-All 13 cases pull live from EDGAR. Results as of June 2025:
+All 13 cases pull live from EDGAR. Results as of June 2026:
 
 | Company | FY | M-Score | Flagged | Known |
 |---|---|---|---|---|
